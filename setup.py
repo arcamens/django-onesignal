@@ -5,7 +5,7 @@ from distutils.core import setup
 setup(name="django-onesignal",
       version="1.0.0",
       description="Django app for integrating with onesignal.",
-      packages=["onesignal", 'onesignal.templates', 
+      packages=["onesignal", 'onesignal.migrations', 'onesignal.templates', 
       'onesignal.templates.onesignal', 'onesignal.static', 'onesignal.static.onesignal'],
 
       package_data={'onesignal.templates.onesignal': ['init_onesignal.html'],
@@ -18,6 +18,7 @@ setup(name="django-onesignal",
       download_url='',
       keywords=[],
       classifiers=[])
+
 
 
 

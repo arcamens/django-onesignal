@@ -47,4 +47,30 @@ git push origin : v2.0.0
 # Upload the package.
 python setup.py sdist register upload
 rm -fr dist
+##############################################################################
+# Create demo project.
+
+cd ~/projects/
+django-admin startproject demo django-onesignal-code
+##############################################################################
+# Make migrations for the app.
+cd ~/projects/django-onesignal-code
+
+python manage.py makemigrations onesignal
+#####k#########################################################################
+# create django-onesignal virtualenv.
+cd ~/.virtualenvs/
+ls -la
+virtualenv django-onesignal -p python
+##############################################################################
+# Install requirements.
+cd ~/projects/django-onesignal-code
+
+pip install -r requirements.txt 
+#####k#########################################################################
+# activate django-onesignal virtualenv.
+
+cd ~/.virtualenvs/
+source django-onesignal/bin/activate
+cd ~/projects/django-onesignal-code
 

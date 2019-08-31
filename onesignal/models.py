@@ -112,3 +112,4 @@ class Device(GroupSignal):
         html    = tmp.render(context)
         return html
 
+
